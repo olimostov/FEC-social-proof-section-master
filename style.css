@@ -39,10 +39,18 @@ p {
 .clr {
   clear: both;
 }
+.bg-dark {
+  background: var(--primary-dark-magenta);
+  color: var(--white);
+}
+.bg-light {
+  background: var(--neutral-light-graish-magenta);
+  color: var(--primary-dark-magenta);
+}
 /* Header */
 .flex-header {
   display: flex;
-  height: 50vh50vh;
+  height: 220px;
   margin-top: 100px;
 }
 .header-info {
@@ -51,7 +59,6 @@ p {
   align-items: right;
   justify-content: flex-start;
   width: 50%;
-  /* height: 400px; */
   padding-right: 150px;
   color: var(--primary-dark-magenta);
 }
@@ -76,7 +83,6 @@ p {
   width: 75%;
   padding: 15px 25px;
   margin: 10px 0;
-  background: var(--neutral-light-graish-magenta);
   border-radius: 5px;
 }
 .header-ratings .rating p {
@@ -95,7 +101,7 @@ p {
 }
 /* Cards */
 .flex-cards {
-  height: 240px;
+  height: 250px;
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -112,8 +118,7 @@ p {
 }
 .flex-cards .card {
   width: 31.5%;
-  height: 200px;
-  background: var(--primary-dark-magenta);
+  height: 230px;
   color: var(--white);
   border-radius: 8px;
 }
@@ -134,6 +139,59 @@ p {
   color: var(--primary-soft-pink);
 }
 .attribution {
+  width: 80%;
   text-align: center;
-  margin-top: 50px;
+  margin: 50px auto;
+}
+@media (max-width: 375px) {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  body {
+    background: url('./images/bg-pattern-top-mobile.svg') no-repeat;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .flex-header {
+    flex-direction: column;
+    margin-top: 80px;
+    height: 550px;
+  }
+  .header-info {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+  .header-ratings {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .header-ratings .stars {
+    display: block;
+    padding: 10px 0 0;
+  }
+  .header-ratings .rating {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 8px 0;
+  }
+  .flex-cards {
+    height: 790px;
+    width: 100%;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  .flex-cards .card {
+    width: 100%;
+    height: 250px;
+  }
 }
